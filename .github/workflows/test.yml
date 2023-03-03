@@ -15,7 +15,7 @@ jobs:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/github-cicd
           role-session-name: someimportantcompany--github-actions-aws-ecr-retag
           aws-region: us-east-1
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: someimportantcompany/github-actions-aws-ecr-retag@master
         uses: ./
         with:
