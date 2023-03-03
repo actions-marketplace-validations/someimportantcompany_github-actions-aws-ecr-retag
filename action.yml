@@ -1,0 +1,20 @@
+name: AWS ECR Retag
+description: Retag a Docker image in ECR without using the Docker CLI
+branding:
+  icon: shield
+  color: yellow
+runs:
+  using: node16
+  main: ./index.dist.js
+inputs:
+  repository:
+    description: ECR repository name
+    required: true
+  src-tag:
+    description: ECR image source tag
+    required: true
+  dest-tag:
+    description: ECR image destination tag
+    required: true
+  delete-before:
+    description: Delete the destination tag beforehand
